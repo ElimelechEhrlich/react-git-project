@@ -1,3 +1,32 @@
+
+.background {
+  display: flex;
+  width: 50vw;
+  height: 80vh;
+  background-color: rgb(42, 77, 138);
+  place-self: center;
+  place-items: center;
+  justify-content: center;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.node {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  outline: 1px solid rgba(144, 175, 175, 0.75);
+  background-color: rgb(66, 72, 82);
+  display: inline-block;
+}
+
+.grid {
+  text-align: center;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
