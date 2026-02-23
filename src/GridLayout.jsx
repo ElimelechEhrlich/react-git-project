@@ -1,33 +1,17 @@
 import React from "react";
-import Node from "./Node";
+
+import Cell from "./Cell";
 
 export default function GridLayout() {
-    const grid = [];
-  for (let row = 0; row < 9; row++) {
-    const currentRow = [];
-    for (let col = 0; col < 10; col++) {
-      currentRow.push(new Node);
-    }
-    grid.push(currentRow);
+  const grid = [];
+  for (let cell = 0; cell < 100; cell++) {
+    grid.push(cell);
   }
   return (
     <div className="grid">
-      {
-        grid.map((row, rowId) => {
-          return(
-            <div className="row" key={rowId}>
-
-              {
-                row.map((node, nodeId) => {
-                  return (
-                    <Node></Node>
-                  );
-                })
-              }
-              </div>
-          )
-        })
-      }
+      {grid.map((cell) => {
+        return <Cell className="cell" key={cell} />;
+      })}
     </div>
-  )
+  );
 }
