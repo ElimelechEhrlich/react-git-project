@@ -5,15 +5,17 @@ import { useClickHendler } from "./useClickHendler";
 
 export default function App() {
   const secretRef = useRef(Math.floor(Math.random() * (100 - 1 + 1) + 1));
+  const colorRef = useRef("rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")");
   console.log(secretRef.current);
-  const { onclick, clicksCounter, clickedCell, isGameOver, setIsGameOver } = useClickHendler(secretRef.current);
+  console.log(colorRef.current);
+  const { onclick, clicksCounter, clickedCell, isGameOver, setIsGameOver } = useClickHendler(secretRef.current, colorRef.current);
   return (
     <>
       <div className="background justify-around flex flex-col">
         <div className="flex flex-row header">
           <p style={{margin:'0', color: "rgb(255, 255, 255)", fontSize:'35px', fontWeight: 'bold'}}>Find the </p>
           <p style={{margin:'0', color: 'rgb(222, 92, 95)', fontSize:'35px',   fontWeight: 'bold'}}>Secret Color!</p>
-          <Cell key={"1000"} className="cell_header" />
+          <Cell key={"1000"} bgColor={colorRef.current} className="cell_header" />
         </div>
         <GridLayout event={onclick} />
         <div style={{margin:'0'}}>

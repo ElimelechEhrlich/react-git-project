@@ -1,12 +1,13 @@
 import { useState } from "react";
 
-export function useClickHendler(secretRef) {
+export function useClickHendler(secretRef, colorRef) {
   const [clickedCell, setClickedCell] = useState(null);
   const [clicksCounter, setClicksCounter] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
   const showSecretColor = (e) => {
     if (e.target.id === secretRef.toString()) {
       e.target.classList.remove("cell");
+      e.target.style.background = colorRef;
       e.target.classList.add("secret");
       setIsGameOver(true);
     } else {
