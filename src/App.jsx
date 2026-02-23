@@ -1,25 +1,29 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import GridLayout from "./GridLayout";
 import Cell from "./Cell";
-import { useClickHendler } from "./clickHendler";
-import { useSecret } from "./useSecret";
+import { useClickHendler } from "./useClickHendler";
 
 export default function App() {
-
+  const secretRef = useRef(Math.floor(Math.random() * (100 - 1 + 1) + 1));
+  console.log(secretRef.current);
+  const { onclick, clicksCounter, clickedCell, isGameOver, setIsGameOver } = useClickHendler(secretRef.current);
   return (
     <>
       <div className="background justify-around flex flex-col">
         <div className="flex flex-row header">
-          <p>Find the </p>
-          <p>Secret Color!</p>
+          <p style={{margin:'0', color: "rgb(255, 255, 255)", fontSize:'35px', fontWeight: 'bold'}}>Find the </p>
+          <p style={{margin:'0', color: 'rgb(222, 92, 95)', fontSize:'35px',   fontWeight: 'bold'}}>Secret Color!</p>
           <Cell key={"1000"} className="cell_header" />
         </div>
-        <GridLayout  />
-        <p>
-          Clicks: 
+        <GridLayout event={onclick} />
+        <div style={{margin:'0'}}>
+        <p style={{margin:'0', color: "rgb(255, 255, 255)", fontSize:'35px', fontWeight: 'bold', justifySelf:'center'}}>
+          Clicks: <span style={{margin:'0', fontSize:'45px', fontWeight: 'bold'}}>{clicksCounter}</span>
         </p>
-        <p>Keep Searching!</p>
+        <p style={{margin:'0', color: 'rgb(252, 210, 79)', fontSize:'35px', fontWeight: 'bold', justifySelf:'center'}}>Keep Searching!</p>
+        </div>
       </div>
     </>
   );
 }
+

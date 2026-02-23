@@ -2,27 +2,29 @@
 @tailwind components;
 @tailwind utilities; */
 
-
 .background {
   display: flex;
+  flex-direction: column;
   width: 50vw;
   height: 80vh;
   background-color: rgb(42, 77, 138);
   place-self: center;
   place-items: center;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .header {
+  display: flex;
   place-items: center;
+  gap: 10px;
 }
 
 .cell_header {
   align-self: center;
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   background-color: rgb(202, 34, 129);
+  border-radius: 3px;
 }
 
 .grid {
@@ -64,6 +66,5 @@
 }
 
 .scale {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
-

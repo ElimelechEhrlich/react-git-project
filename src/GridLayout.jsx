@@ -10,7 +10,7 @@ export default function GridLayout({ event }) {
   return (
     <div className="grid">
       {grid.map((cell) => {
-        return <Cell event={event} className="cell" id={cell} />;
+        return <Cell event={event} className="cell" key={cell} id={cell} />;
       })}
     </div>
   );
