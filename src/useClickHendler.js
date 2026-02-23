@@ -13,7 +13,7 @@ export function useClickHendler(secretRef, colorRef) {
     } else {
       e.target.classList.remove("cell");
       e.target.classList.add("standard_cell", "scale");
-      setTimeout(() => {e.target.classList.remove("scale")}, 150);
+      setTimeout(() => {e.target.classList.remove("scale")}, 120);
       e.target.textContent = "X";
     }
   };

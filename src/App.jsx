@@ -22,7 +22,7 @@ export default function App() {
         <p style={{margin:'0', color: "rgb(255, 255, 255)", fontSize:'35px', fontFamily: 'Gill Sans, sans-serif', fontWeight: 'bold', justifySelf:'center'}}>
           Clicks: <span style={{margin:'0', fontSize:'45px', fontWeight: 'bold'}}>{clicksCounter}</span>
         </p>
-        <p style={{margin:'0', color: `${!isGameOver? 'rgb(252, 210, 79)': 'rgb(4, 241, 68)'}`, fontSize:'35px', fontFamily: 'Gill Sans, sans-serif', fontWeight: 'bold', justifySelf:'center'}}>{!isGameOver? 'Keep Searching!': 'You found the secret color!'}</p>
+        <p style={{margin:'0',   transition: 'transform 2s', transitionTimingFunction:'cubic-bezier(0.5, 1, 0.5, 0.5)', transform: `${isGameOver?'scale(1.5) translate(0,-500%)':null}`, color: `${!isGameOver? 'rgb(252, 210, 79)': 'rgb(4, 241, 68)'}`, fontSize:'35px', fontFamily: 'Gill Sans, sans-serif', fontWeight: 'bold', justifySelf:'center'}}>{!isGameOver? 'Keep Searching!': 'You found the secret color!'}</p>
         </div>
       </div>
     </>
