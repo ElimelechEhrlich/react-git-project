@@ -13,8 +13,8 @@ export default function App() {
     <>
       <div className="background justify-around flex flex-col">
         <div className="flex flex-row header">
-          <p style={{margin:'0', color: "rgb(255, 255, 255)", fontSize:'35px', fontWeight: 'bold'}}>welcome to the game!</p>
-          <p style={{margin:'0', color: 'rgb(222, 92, 95)', fontSize:'35px',   fontWeight: 'bold'}}>Find the color!</p>
+          <p style={{margin:'0', color: "rgb(255, 255, 255)", fontSize:'35px', fontWeight: 'bold'}}>Welcome to the game!</p>
+          <p style={{margin:'0', color: 'rgb(222, 92, 95)', fontSize:'35px',   fontWeight: 'bold'}}>Find the color:</p>
           <Cell key={"1000"} bgColor={colorRef.current} className="cell_header" />
         </div>
         <GridLayout event={onclick} />
