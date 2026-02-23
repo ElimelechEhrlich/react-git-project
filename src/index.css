@@ -3,6 +3,7 @@
 @tailwind utilities; */
 
 .background {
+  padding: 50px 0 ;
   display: flex;
   flex-direction: column;
   width: 50vw;
@@ -11,6 +12,7 @@
   place-self: center;
   place-items: center;
   justify-content: space-evenly;
+  
 }
 
 .header {
@@ -34,16 +36,15 @@
   padding: 4px;
   background-color: rgb(184, 193, 209);
   border-radius: 3px;
+  box-shadow: 1px 1px 20px black;
 }
 
 .cell {
   border-radius: 2px;
   width: 35px;
   height: 35px;
-  /* background-color: white; */
-  /* outline: 1px solid rgba(144, 175, 175, 0.75); */
   background-color: rgb(66, 72, 82);
-  /* display: inline-block; */
+  box-shadow: 0.5px 0.5px 1px black;
 }
 
 .cell:hover {
@@ -51,18 +52,20 @@
 }
 
 .secret {
-  /* background-color: rgb(202, 34, 129); */
   transform: scale(1.5);
   border-radius: 3px;
+    box-shadow: 0.5px 0.5px 1px black;
+
 }
 
 .standard_cell {
   background-color: rgb(226, 198, 155);
   text-align: center;
   place-content: center;
-  /* font-size: 25px; */
   font-weight: bold;
   color: rgb(187, 160, 122);
+    box-shadow: 0.5px 0.5px 1px black;
+
 }
 
 .scale {
