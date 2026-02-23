@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities; */
 
+
 .background {
   display: flex;
   width: 50vw;
@@ -9,24 +10,60 @@
   background-color: rgb(42, 77, 138);
   place-self: center;
   place-items: center;
+  align-items: center;
   justify-content: center;
 }
 
-.row {
-  margin: 0;
-  padding: 0;
+.header {
+  place-items: center;
 }
 
-.node {
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  outline: 1px solid rgba(144, 175, 175, 0.75);
-  background-color: rgb(66, 72, 82);
-  display: inline-block;
+.cell_header {
+  align-self: center;
+  width: 35px;
+  height: 35px;
+  background-color: rgb(202, 34, 129);
 }
 
 .grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3px;
+  padding: 4px;
+  background-color: rgb(184, 193, 209);
+  border-radius: 3px;
+}
+
+.cell {
+  border-radius: 2px;
+  width: 35px;
+  height: 35px;
+  /* background-color: white; */
+  /* outline: 1px solid rgba(144, 175, 175, 0.75); */
+  background-color: rgb(66, 72, 82);
+  /* display: inline-block; */
+}
+
+.cell:hover {
+  background-color: rgb(116, 126, 143);
+}
+
+.secret {
+  background-color: rgb(202, 34, 129);
+  transform: scale(1.5);
+  border-radius: 3px;
+}
+
+.standard_cell {
+  background-color: rgb(226, 198, 155);
   text-align: center;
+  place-content: center;
+  /* font-size: 25px; */
+  font-weight: bold;
+  color: rgb(187, 160, 122);
+}
+
+.scale {
+    transform: scale(1.2);
 }
 
