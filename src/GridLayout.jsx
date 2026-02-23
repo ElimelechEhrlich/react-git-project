@@ -2,15 +2,15 @@ import React from "react";
 
 import Cell from "./Cell";
 
-export default function GridLayout() {
+export default function GridLayout({ event }) {
   const grid = [];
-  for (let cell = 0; cell < 100; cell++) {
+  for (let cell = 1; cell <= 100; cell++) {
     grid.push(cell);
   }
   return (
     <div className="grid">
       {grid.map((cell) => {
-        return <Cell className="cell" key={cell} />;
+        return <Cell event={event} className="cell" id={cell} />;
       })}
     </div>
   );
