@@ -6,8 +6,8 @@
   padding: 50px 0 ;
   display: flex;
   flex-direction: column;
-  width: 50vw;
-  height: 80vh;
+  width: 100vw;
+  height: 100vh;
   background-color: rgb(42, 77, 138);
   place-self: center;
   place-items: center;
