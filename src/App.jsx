@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import GridLayout from "./GridLayout";
 import Cell from "./Cell";
 import { useClickHendler } from "./useClickHendler";
@@ -6,9 +6,8 @@ import { useClickHendler } from "./useClickHendler";
 export default function App() {
   const secretRef = useRef(Math.floor(Math.random() * (100 - 1 + 1) + 1));
   const colorRef = useRef("rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")");
-  console.log(secretRef.current);
-  console.log(colorRef.current);
   const { onclick, clicksCounter, clickedCell, isGameOver, setIsGameOver } = useClickHendler(secretRef.current, colorRef.current);
+  useEffect(() =>console.log(secretRef.current),[])
   return (
     <>
       <div className="background justify-around flex flex-col">
