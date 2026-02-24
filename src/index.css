@@ -52,7 +52,7 @@
 }
 
 .secret {
-  transform: scale(5) translate(0, -100%);
+  transform: scale(5) translate(0%,0%);
   
   border-radius: 3px;
   box-shadow: 0.5px 0.5px 1px black;
@@ -60,14 +60,39 @@
   transition: transform 2s ;
 }
 
+.text {
+    color: white;
+    margin:0; 
+    font-size: 35px; 
+    font-family: Gill Sans, sans-serif; 
+    font-weight: bold;
+    justify-self: center
+}
+
+.red_text {
+    color: rgb(222, 92, 95); 
+}
+
+.yello_text {
+    color: rgb(252, 210, 79);
+}
+.isGameOver {
+    transition-timing-function:'cubic-bezier(0.5, 1, 0.5, 0.5)';
+    transition: transform 2s; 
+    transform: scale(1.07);
+    color: rgb(4, 241, 68);
+}
+
+/* transform: `${isGameOver?'scale(1.07) translate(0%,0%)':null}`; 
+color: `${!isGameOver? 'rgb(252, 210, 79)': 'rgb(4, 241, 68)'}`;  */
+
 .standard_cell {
   background-color: rgb(226, 198, 155);
   text-align: center;
   place-content: center;
   font-weight: bold;
   color: rgb(187, 160, 122);
-    box-shadow: 0.5px 0.5px 1px black;
-
+  box-shadow: 0.5px 0.5px 1px black;
 }
 
 .scale {
