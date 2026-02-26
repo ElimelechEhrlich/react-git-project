@@ -33,6 +33,7 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 3px;
+width: 80%
   padding: 4px;
   background-color: rgb(184, 193, 209);
   border-radius: 3px;
@@ -41,8 +42,8 @@
 
 .cell {
   border-radius: 2px;
-  width: 35px;
-  height: 35px;
+  width: 9%;
+  height: 9%;
   background-color: rgb(66, 72, 82);
   box-shadow: 0.5px 0.5px 1px black;
 }
