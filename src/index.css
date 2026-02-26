@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100rem;
+  height: 100%;
   background-color: rgb(42, 77, 138);
   place-self: center;
   place-items: center;
