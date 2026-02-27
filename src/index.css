@@ -42,8 +42,8 @@ width: 80%
 
 .cell {
   border-radius: 2px;
-  width: 9%;
-  height: 9%;
+  width: 30px;
+  height: 30px;
   background-color: rgb(66, 72, 82);
   box-shadow: 0.5px 0.5px 1px black;
 }
