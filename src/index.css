@@ -33,7 +33,7 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 3px;
-width: 80%
+width: 80%;
   padding: 4px;
   background-color: rgb(184, 193, 209);
   border-radius: 3px;
